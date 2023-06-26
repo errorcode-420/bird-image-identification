@@ -1,0 +1,158 @@
+.main-container {
+  padding: 1%;
+}
+.side-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-thumbnail {
+  height: 200px;
+  width: 300px;
+}
+
+.big-img {
+  height: 120px !important;
+  width: 160px !important;
+}
+.card{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;    
+  
+}
+.card-body{
+  justify-content: center; 
+  align-items: center;    
+  
+  
+}
+.info-button {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: black;
+  margin-bottom: 2px;
+}
+
+.card-title {
+  font-size: 14px; /* Passe die Schriftgröße nach Bedarf an */
+
+}  
+
+p {
+  font-size: 16px; /* Passe die Schriftgröße nach Bedarf an */
+}
+.card-text {
+  font-size: 12px; /* Passe die Schriftgröße nach Bedarf an */
+}
+
+.btn-rounded {
+  width:30%;
+}
+
+
+
+
+@media (min-width: 200px) {
+  .img-thumbnail {
+    height: 100px;
+    width: 150px;
+    margin:auto
+  }
+
+  
+ 
+}
+@media (min-width: 500px) {
+  .img-thumbnail {
+    height: 200px !important;
+    width: 300px !important;
+  }
+
+}
+@media (min-width: 800px) {
+  .img-thumbnail {
+    height: 300px !important;
+    width: 450px !important;
+  }
+  p {
+    font-size: 22px; /* Passe die Schriftgröße nach Bedarf an */
+  }
+  .card-title {
+    font-size: 18px; /* Passe die Schriftgröße nach Bedarf an */
+  
+  }  
+  .card-text {
+    font-size: 16px; /* Passe die Schriftgröße nach Bedarf an */
+  }
+  .btn-rounded {
+    width:20%
+  }
+  
+}
+
+.alert{
+  background-color: blanchedalmond;
+  --bs-alert-border: var(--bs-border-width) solid rgb(218, 145, 35);
+}
+
+
+.reload-btn {
+  background-color: green;
+  border-color: green;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.reload-btn:hover {
+  background-color:#00800073;
+  border-color: #00800073;
+  cursor: pointer;  
+}
+
+.upload-btn {
+  background-color: red;
+  border-color: red;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #f99c9c;
+  border-color: #f99c9c;
+  cursor: pointer;  
+}
+
+.form-label {
+  cursor: pointer;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red !important;
+  height: 100%;
+  margin: 0 auto;
+}
+.mat-progress-spinner.loader .mat-progress-spinner-circle, .mat-progress-spinner.loader .mat-progress-spinner-circle::after {
+  background-color: red;
+  border-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.image-container {
+  display: flex;
+} */

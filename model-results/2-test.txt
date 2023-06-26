@@ -1,0 +1,824 @@
+6/6 [==============================] - 4s 357ms/step - loss: 7.0334 - accuracy: 0.6222 - val_loss: 1.6578 - val_accuracy: 0.5312
+Epoch 2/10
+6/6 [==============================] - 1s 117ms/step - loss: 0.8018 - accuracy: 0.6667 - val_loss: 1.0018 - val_accuracy: 0.4062
+Epoch 3/10
+6/6 [==============================] - 1s 113ms/step - loss: 0.2822 - accuracy: 0.8667 - val_loss: 3.0432 - val_accuracy: 0.3750
+Epoch 4/10
+6/6 [==============================] - 1s 122ms/step - loss: 0.4157 - accuracy: 0.8444 - val_loss: 1.6642 - val_accuracy: 0.5312
+Epoch 5/10
+6/6 [==============================] - 1s 110ms/step - loss: 0.1431 - accuracy: 0.9333 - val_loss: 1.1339 - val_accuracy: 0.6562
+Epoch 6/10
+6/6 [==============================] - 1s 112ms/step - loss: 0.0811 - accuracy: 0.9778 - val_loss: 1.4581 - val_accuracy: 0.6562
+Epoch 7/10
+6/6 [==============================] - 1s 112ms/step - loss: 0.0544 - accuracy: 0.9778 - val_loss: 1.8359 - val_accuracy: 0.7188
+Epoch 8/10
+6/6 [==============================] - 1s 116ms/step - loss: 0.0462 - accuracy: 0.9778 - val_loss: 1.6848 - val_accuracy: 0.5938
+Epoch 9/10
+6/6 [==============================] - 1s 117ms/step - loss: 0.0583 - accuracy: 0.9778 - val_loss: 1.2149 - val_accuracy: 0.7188
+Epoch 10/10
+6/6 [==============================] - 1s 110ms/step - loss: 0.0199 - accuracy: 1.0000 - val_loss: 1.4048 - val_accuracy: 0.7188
+
+Validation results:
+Loss: [1.6577774286270142, 1.0018192529678345, 3.043208599090576, 1.6641864776611328, 1.1338518857955933, 1.4580546617507935, 1.8358705043792725, 1.6848021745681763, 1.214896321296692, 1.4047938585281372]
+Accurancy: [0.53125, 0.40625, 0.375, 0.53125, 0.65625, 0.65625, 0.71875, 0.59375, 0.71875, 0.71875]
+
+<ipython-input-63-0936c7f8c156>:122: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 1.223761796951294
+Accuracy: 0.7272727489471436
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 45
+--valid_size: 10
+--test_size: 10
+--categories: 2
+--batch_size: 8
+--epochs: 10
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 45
+--valid_size: 10
+--test_size: 10
+---SETTINGS---
+
+
+
+14/14 [==============================] - 3s 99ms/step - loss: 3.2054 - accuracy: 0.5091 - val_loss: 0.7056 - val_accuracy: 0.5217
+Epoch 2/10
+14/14 [==============================] - 1s 95ms/step - loss: 0.6498 - accuracy: 0.6000 - val_loss: 0.5161 - val_accuracy: 0.7826
+Epoch 3/10
+14/14 [==============================] - 2s 114ms/step - loss: 0.5171 - accuracy: 0.7636 - val_loss: 0.5417 - val_accuracy: 0.6957
+Epoch 4/10
+14/14 [==============================] - 1s 90ms/step - loss: 0.4973 - accuracy: 0.8000 - val_loss: 0.4495 - val_accuracy: 0.7826
+Epoch 5/10
+14/14 [==============================] - 1s 83ms/step - loss: 0.2983 - accuracy: 0.8636 - val_loss: 2.4121 - val_accuracy: 0.4783
+Epoch 6/10
+14/14 [==============================] - 1s 87ms/step - loss: 0.4316 - accuracy: 0.8636 - val_loss: 0.3674 - val_accuracy: 0.7826
+Epoch 7/10
+14/14 [==============================] - 1s 85ms/step - loss: 0.1640 - accuracy: 0.9364 - val_loss: 0.6663 - val_accuracy: 0.7826
+Epoch 8/10
+14/14 [==============================] - 1s 84ms/step - loss: 0.0466 - accuracy: 1.0000 - val_loss: 0.5860 - val_accuracy: 0.7826
+Epoch 9/10
+14/14 [==============================] - 1s 83ms/step - loss: 0.2166 - accuracy: 0.9364 - val_loss: 1.1340 - val_accuracy: 0.6957
+Epoch 10/10
+14/14 [==============================] - 1s 84ms/step - loss: 0.1013 - accuracy: 0.9818 - val_loss: 0.5638 - val_accuracy: 0.7391
+
+Validation results:
+Loss: [0.7055805325508118, 0.5160903930664062, 0.5417463779449463, 0.4495072662830353, 2.4120936393737793, 0.3674073815345764, 0.6662713885307312, 0.5860258340835571, 1.1340492963790894, 0.5637674927711487]
+Accurancy: [0.52173912525177, 0.782608687877655, 0.695652186870575, 0.782608687877655, 0.47826087474823, 0.782608687877655, 0.782608687877655, 0.782608687877655, 0.695652186870575, 0.739130437374115]
+
+<ipython-input-138-d47ac2355941>:112: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.7010654211044312
+Accuracy: 0.6666666865348816
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 200
+--valid_size: 40
+--test_size: 40
+--categories: 2
+--batch_size: 8
+--epochs: 10
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 200
+--valid_size: 40
+--test_size: 40
+---SETTINGS---
+
+
+6/6 [==============================] - 5s 497ms/step - loss: 10.9115 - accuracy: 0.4773 - val_loss: 1.1169 - val_accuracy: 0.5814
+Epoch 2/10
+6/6 [==============================] - 3s 415ms/step - loss: 0.7802 - accuracy: 0.4943 - val_loss: 0.6668 - val_accuracy: 0.6047
+Epoch 3/10
+6/6 [==============================] - 3s 561ms/step - loss: 0.5888 - accuracy: 0.6307 - val_loss: 0.6103 - val_accuracy: 0.5349
+Epoch 4/10
+6/6 [==============================] - 3s 420ms/step - loss: 0.4777 - accuracy: 0.7955 - val_loss: 0.5788 - val_accuracy: 0.6047
+Epoch 5/10
+6/6 [==============================] - 3s 431ms/step - loss: 0.4049 - accuracy: 0.8182 - val_loss: 0.6191 - val_accuracy: 0.6512
+Epoch 6/10
+6/6 [==============================] - 3s 421ms/step - loss: 0.3661 - accuracy: 0.9091 - val_loss: 0.5623 - val_accuracy: 0.5814
+Epoch 7/10
+6/6 [==============================] - 3s 599ms/step - loss: 0.1893 - accuracy: 0.9432 - val_loss: 0.6344 - val_accuracy: 0.6977
+Epoch 8/10
+6/6 [==============================] - 3s 473ms/step - loss: 0.0856 - accuracy: 0.9716 - val_loss: 0.6490 - val_accuracy: 0.6744
+Epoch 9/10
+6/6 [==============================] - 3s 431ms/step - loss: 0.0397 - accuracy: 0.9943 - val_loss: 0.9630 - val_accuracy: 0.6047
+Epoch 10/10
+6/6 [==============================] - 3s 494ms/step - loss: 0.0866 - accuracy: 0.9659 - val_loss: 1.0890 - val_accuracy: 0.7209
+
+Validation results:
+Loss: [1.1168967485427856, 0.6668016910552979, 0.6103484034538269, 0.5788018107414246, 0.619065523147583, 0.5623334646224976, 0.6344189047813416, 0.6490024328231812, 0.9630025625228882, 1.0889519453048706]
+Accurancy: [0.5813953280448914, 0.604651153087616, 0.5348837375640869, 0.604651153087616, 0.6511628031730652, 0.5813953280448914, 0.6976743936538696, 0.6744186282157898, 0.604651153087616, 0.7209302186965942]
+
+<ipython-input-82-3e7f465e68e9>:138: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 1.5219014883041382
+Accuracy: 0.7027027010917664
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+---SETTINGS---
+
+
+
+
+
+
+
+
+
+
+12/12 [==============================] - 80s 6s/step - loss: 5.2378 - accuracy: 0.5242 - val_loss: 0.7239 - val_accuracy: 0.6067
+Epoch 2/10
+12/12 [==============================] - 5s 443ms/step - loss: 0.6611 - accuracy: 0.6156 - val_loss: 0.6256 - val_accuracy: 0.7416
+Epoch 3/10
+12/12 [==============================] - 6s 530ms/step - loss: 0.4580 - accuracy: 0.8172 - val_loss: 0.5331 - val_accuracy: 0.7978
+Epoch 4/10
+12/12 [==============================] - 5s 441ms/step - loss: 0.2117 - accuracy: 0.9301 - val_loss: 0.5527 - val_accuracy: 0.6854
+Epoch 5/10
+12/12 [==============================] - 6s 472ms/step - loss: 0.1711 - accuracy: 0.9220 - val_loss: 0.5506 - val_accuracy: 0.6067
+Epoch 6/10
+12/12 [==============================] - 6s 488ms/step - loss: 0.2071 - accuracy: 0.9570 - val_loss: 0.5398 - val_accuracy: 0.7303
+Epoch 7/10
+12/12 [==============================] - 5s 439ms/step - loss: 0.0390 - accuracy: 0.9919 - val_loss: 0.4226 - val_accuracy: 0.8090
+Epoch 8/10
+12/12 [==============================] - 5s 433ms/step - loss: 0.0229 - accuracy: 0.9973 - val_loss: 0.5745 - val_accuracy: 0.8202
+Epoch 9/10
+12/12 [==============================] - 5s 439ms/step - loss: 0.0153 - accuracy: 1.0000 - val_loss: 0.7292 - val_accuracy: 0.8202
+Epoch 10/10
+12/12 [==============================] - 5s 437ms/step - loss: 0.0014 - accuracy: 1.0000 - val_loss: 0.4167 - val_accuracy: 0.8427
+
+Validation results:
+Loss: [0.7239092588424683, 0.6255653500556946, 0.5330769419670105, 0.5526511073112488, 0.5505999326705933, 0.5397796034812927, 0.4226420521736145, 0.5744518637657166, 0.729220986366272, 0.41669198870658875]
+Accurancy: [0.6067415475845337, 0.7415730357170105, 0.7977527976036072, 0.6853932738304138, 0.6067415475845337, 0.7303370833396912, 0.8089887499809265, 0.8202247023582458, 0.8202247023582458, 0.8426966071128845]
+
+<ipython-input-2-917204ca541b>:136: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.7221612334251404
+Accuracy: 0.792792797088623
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.8
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+---SETTINGS---
+
+Predictions for testing images:
+
+
+
+
+Epoch 1/7
+/usr/local/lib/python3.10/dist-packages/keras/backend.py:5612: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a Softmax activation and thus does not represent logits. Was this intended?
+  output, from_logits = _get_logits(
+6/6 [==============================] - 35s 4s/step - loss: 9.6512 - accuracy: 0.4485 - val_loss: 0.6589 - val_accuracy: 0.5517
+Epoch 2/7
+6/6 [==============================] - 3s 396ms/step - loss: 0.7223 - accuracy: 0.4727 - val_loss: 0.5719 - val_accuracy: 0.6897
+Epoch 3/7
+6/6 [==============================] - 2s 377ms/step - loss: 0.6191 - accuracy: 0.7576 - val_loss: 0.5341 - val_accuracy: 0.6552
+Epoch 4/7
+6/6 [==============================] - 2s 362ms/step - loss: 0.3208 - accuracy: 0.8909 - val_loss: 0.5365 - val_accuracy: 0.6897
+Epoch 5/7
+6/6 [==============================] - 3s 483ms/step - loss: 0.2599 - accuracy: 0.9212 - val_loss: 0.4908 - val_accuracy: 0.7931
+Epoch 6/7
+6/6 [==============================] - 3s 437ms/step - loss: 0.1516 - accuracy: 0.9636 - val_loss: 0.2871 - val_accuracy: 0.9310
+Epoch 7/7
+6/6 [==============================] - 2s 443ms/step - loss: 0.0866 - accuracy: 0.9758 - val_loss: 0.3518 - val_accuracy: 0.8966
+
+Validation results:
+Loss: [0.6588577628135681, 0.5719306468963623, 0.5340530872344971, 0.5364574193954468, 0.4908033013343811, 0.2870524525642395, 0.35177525877952576]
+Accurancy: [0.5517241358757019, 0.6896551847457886, 0.6551724076271057, 0.6896551847457886, 0.7931034564971924, 0.931034505367279, 0.8965517282485962]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.3983602523803711
+Accuracy: 0.8857142925262451
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 200
+--valid_size: 50
+--test_size: 50
+---SETTINGS---
+
+Predictions for testing images:
+
+
+
+5/5 [==============================] - 4s 488ms/step - loss: 6.2706 - accuracy: 0.4380 - val_loss: 0.7119 - val_accuracy: 0.4783
+Epoch 2/7
+5/5 [==============================] - 2s 388ms/step - loss: 0.6744 - accuracy: 0.5401 - val_loss: 0.7174 - val_accuracy: 0.5217
+Epoch 3/7
+5/5 [==============================] - 2s 392ms/step - loss: 0.6600 - accuracy: 0.6569 - val_loss: 1.2244 - val_accuracy: 0.5217
+Epoch 4/7
+5/5 [==============================] - 3s 562ms/step - loss: 0.9677 - accuracy: 0.5912 - val_loss: 0.9656 - val_accuracy: 0.5217
+Epoch 5/7
+5/5 [==============================] - 2s 389ms/step - loss: 0.6446 - accuracy: 0.6423 - val_loss: 0.7377 - val_accuracy: 0.5217
+Epoch 6/7
+5/5 [==============================] - 2s 389ms/step - loss: 0.3734 - accuracy: 0.8832 - val_loss: 0.6994 - val_accuracy: 0.5652
+Epoch 7/7
+5/5 [==============================] - 2s 377ms/step - loss: 0.2216 - accuracy: 0.9197 - val_loss: 0.7969 - val_accuracy: 0.5652
+
+Validation results:
+Loss: [0.711929976940155, 0.7174089550971985, 1.2244250774383545, 0.9655789732933044, 0.7377256155014038, 0.6994307041168213, 0.7969084978103638]
+Accurancy: [0.47826087474823, 0.52173912525177, 0.52173912525177, 0.52173912525177, 0.52173912525177, 0.5652173757553101, 0.5652173757553101]
+
+<ipython-input-7-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 1.0015404224395752
+Accuracy: 0.5714285969734192
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.4
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+Epoch 1/7
+/usr/local/lib/python3.10/dist-packages/keras/backend.py:5612: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a Softmax activation and thus does not represent logits. Was this intended?
+  output, from_logits = _get_logits(
+4/4 [==============================] - 33s 7s/step - loss: 8.5105 - accuracy: 0.5000 - val_loss: 5.5540 - val_accuracy: 0.5000
+Epoch 2/7
+4/4 [==============================] - 2s 644ms/step - loss: 1.9798 - accuracy: 0.4444 - val_loss: 1.0259 - val_accuracy: 0.5000
+Epoch 3/7
+4/4 [==============================] - 2s 469ms/step - loss: 0.7554 - accuracy: 0.4907 - val_loss: 0.9266 - val_accuracy: 0.5000
+Epoch 4/7
+4/4 [==============================] - 2s 481ms/step - loss: 0.9016 - accuracy: 0.5000 - val_loss: 0.7686 - val_accuracy: 0.5000
+Epoch 5/7
+4/4 [==============================] - 2s 593ms/step - loss: 0.7845 - accuracy: 0.5463 - val_loss: 0.7211 - val_accuracy: 0.4091
+Epoch 6/7
+4/4 [==============================] - 2s 528ms/step - loss: 0.7984 - accuracy: 0.4815 - val_loss: 0.8713 - val_accuracy: 0.5000
+Epoch 7/7
+4/4 [==============================] - 2s 553ms/step - loss: 0.7725 - accuracy: 0.5000 - val_loss: 0.6871 - val_accuracy: 0.4091
+
+Validation results:
+Loss: [5.554025650024414, 1.0259422063827515, 0.9265968799591064, 0.7685943245887756, 0.7211412787437439, 0.8712818622589111, 0.6871376037597656]
+Accurancy: [0.5, 0.5, 0.5, 0.5, 0.40909090638160706, 0.5, 0.40909090638160706]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.6838067770004272
+Accuracy: 0.6190476417541504
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.3
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+Predictions for testing images:
+
+
+Epoch 1/7
+/usr/local/lib/python3.10/dist-packages/keras/backend.py:5612: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a Softmax activation and thus does not represent logits. Was this intended?
+  output, from_logits = _get_logits(
+4/4 [==============================] - 33s 7s/step - loss: 8.5105 - accuracy: 0.5000 - val_loss: 5.5540 - val_accuracy: 0.5000
+Epoch 2/7
+4/4 [==============================] - 2s 644ms/step - loss: 1.9798 - accuracy: 0.4444 - val_loss: 1.0259 - val_accuracy: 0.5000
+Epoch 3/7
+4/4 [==============================] - 2s 469ms/step - loss: 0.7554 - accuracy: 0.4907 - val_loss: 0.9266 - val_accuracy: 0.5000
+Epoch 4/7
+4/4 [==============================] - 2s 481ms/step - loss: 0.9016 - accuracy: 0.5000 - val_loss: 0.7686 - val_accuracy: 0.5000
+Epoch 5/7
+4/4 [==============================] - 2s 593ms/step - loss: 0.7845 - accuracy: 0.5463 - val_loss: 0.7211 - val_accuracy: 0.4091
+Epoch 6/7
+4/4 [==============================] - 2s 528ms/step - loss: 0.7984 - accuracy: 0.4815 - val_loss: 0.8713 - val_accuracy: 0.5000
+Epoch 7/7
+4/4 [==============================] - 2s 553ms/step - loss: 0.7725 - accuracy: 0.5000 - val_loss: 0.6871 - val_accuracy: 0.4091
+
+Validation results:
+Loss: [5.554025650024414, 1.0259422063827515, 0.9265968799591064, 0.7685943245887756, 0.7211412787437439, 0.8712818622589111, 0.6871376037597656]
+Accurancy: [0.5, 0.5, 0.5, 0.5, 0.40909090638160706, 0.5, 0.40909090638160706]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.6838067770004272
+Accuracy: 0.6190476417541504
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.3
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+
+4/4 [==============================] - 4s 421ms/step - loss: 7.9055 - accuracy: 0.5370 - val_loss: 1.3763 - val_accuracy: 0.5000
+Epoch 2/7
+4/4 [==============================] - 2s 473ms/step - loss: 1.5986 - accuracy: 0.5648 - val_loss: 0.8739 - val_accuracy: 0.5000
+Epoch 3/7
+4/4 [==============================] - 2s 463ms/step - loss: 0.6487 - accuracy: 0.6204 - val_loss: 0.6557 - val_accuracy: 0.5909
+Epoch 4/7
+4/4 [==============================] - 2s 383ms/step - loss: 0.8114 - accuracy: 0.7593 - val_loss: 1.9090 - val_accuracy: 0.5000
+Epoch 5/7
+4/4 [==============================] - 2s 489ms/step - loss: 0.7854 - accuracy: 0.7407 - val_loss: 0.6865 - val_accuracy: 0.5455
+Epoch 6/7
+4/4 [==============================] - 2s 360ms/step - loss: 0.4121 - accuracy: 0.8704 - val_loss: 0.6426 - val_accuracy: 0.7273
+Epoch 7/7
+4/4 [==============================] - 2s 379ms/step - loss: 0.2568 - accuracy: 0.9444 - val_loss: 0.6494 - val_accuracy: 0.6818
+
+Validation results:
+Loss: [1.3762978315353394, 0.873927116394043, 0.6557471752166748, 1.9090430736541748, 0.686521589756012, 0.6426173448562622, 0.6493626832962036]
+Accurancy: [0.5, 0.5, 0.5909090638160706, 0.5, 0.5454545617103577, 0.7272727489471436, 0.6818181872367859]
+
+<ipython-input-12-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.6172810792922974
+Accuracy: 0.6666666865348816
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.3
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+
+/usr/local/lib/python3.10/dist-packages/keras/backend.py:5612: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a Softmax activation and thus does not represent logits. Was this intended?
+  output, from_logits = _get_logits(
+4/4 [==============================] - 4s 464ms/step - loss: 12.3739 - accuracy: 0.5278 - val_loss: 1.9821 - val_accuracy: 0.5000
+Epoch 2/7
+4/4 [==============================] - 2s 371ms/step - loss: 1.3971 - accuracy: 0.5556 - val_loss: 1.0386 - val_accuracy: 0.5000
+Epoch 3/7
+4/4 [==============================] - 2s 533ms/step - loss: 0.8225 - accuracy: 0.5463 - val_loss: 0.6919 - val_accuracy: 0.6364
+Epoch 4/7
+4/4 [==============================] - 2s 502ms/step - loss: 0.6080 - accuracy: 0.6204 - val_loss: 0.7046 - val_accuracy: 0.5000
+Epoch 5/7
+4/4 [==============================] - 2s 471ms/step - loss: 0.5078 - accuracy: 0.7778 - val_loss: 1.4883 - val_accuracy: 0.5000
+Epoch 6/7
+4/4 [==============================] - 2s 370ms/step - loss: 0.6843 - accuracy: 0.6759 - val_loss: 0.8028 - val_accuracy: 0.5455
+Epoch 7/7
+4/4 [==============================] - 2s 365ms/step - loss: 0.5525 - accuracy: 0.6667 - val_loss: 0.9618 - val_accuracy: 0.4545
+
+Validation results:
+Loss: [1.9821231365203857, 1.038604974746704, 0.6918591856956482, 0.7045563459396362, 1.4883313179016113, 0.8028045296669006, 0.9617820978164673]
+Accurancy: [0.5, 0.5, 0.6363636255264282, 0.5, 0.5, 0.5454545617103577, 0.4545454680919647]
+
+<ipython-input-17-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.48433876037597656
+Accuracy: 0.8095238208770752
+
+
+5/5 [==============================] - 20s 2s/step - loss: 2.6346 - accuracy: 0.4462 - val_loss: 0.7242 - val_accuracy: 0.3810
+Epoch 2/7
+5/5 [==============================] - 2s 340ms/step - loss: 0.6256 - accuracy: 0.5692 - val_loss: 0.4617 - val_accuracy: 0.7143
+Epoch 3/7
+5/5 [==============================] - 2s 312ms/step - loss: 0.5186 - accuracy: 0.6846 - val_loss: 1.0152 - val_accuracy: 0.4762
+Epoch 4/7
+5/5 [==============================] - 2s 332ms/step - loss: 0.4890 - accuracy: 0.7231 - val_loss: 0.5646 - val_accuracy: 0.6190
+Epoch 5/7
+5/5 [==============================] - 2s 340ms/step - loss: 0.3227 - accuracy: 0.8462 - val_loss: 0.6565 - val_accuracy: 0.6667
+Epoch 6/7
+5/5 [==============================] - 2s 364ms/step - loss: 0.4427 - accuracy: 0.8692 - val_loss: 0.9808 - val_accuracy: 0.5714
+Epoch 7/7
+5/5 [==============================] - 2s 420ms/step - loss: 0.3064 - accuracy: 0.8923 - val_loss: 0.8534 - val_accuracy: 0.4762
+
+Validation results:
+Loss: [0.7242242097854614, 0.46169543266296387, 1.0151723623275757, 0.5646092295646667, 0.6564538478851318, 0.9807690382003784, 0.8534424901008606]
+Accurancy: [0.380952388048172, 0.7142857313156128, 0.4761904776096344, 0.6190476417541504, 0.6666666865348816, 0.5714285969734192, 0.4761904776096344]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.5859235525131226
+Accuracy: 0.7200000286102295
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.4
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+5/5 [==============================] - 4s 458ms/step - loss: 28.1150 - accuracy: 0.6385 - val_loss: 2.8366 - val_accuracy: 0.3810
+Epoch 2/7
+5/5 [==============================] - 2s 410ms/step - loss: 0.9157 - accuracy: 0.5154 - val_loss: 0.6223 - val_accuracy: 0.6190
+Epoch 3/7
+5/5 [==============================] - 2s 331ms/step - loss: 0.6543 - accuracy: 0.6692 - val_loss: 1.9217 - val_accuracy: 0.4286
+Epoch 4/7
+5/5 [==============================] - 2s 395ms/step - loss: 0.9115 - accuracy: 0.6615 - val_loss: 0.5232 - val_accuracy: 0.7143
+Epoch 5/7
+5/5 [==============================] - 2s 329ms/step - loss: 0.2883 - accuracy: 0.8692 - val_loss: 0.4757 - val_accuracy: 0.6667
+Epoch 6/7
+5/5 [==============================] - 2s 360ms/step - loss: 0.2818 - accuracy: 0.8923 - val_loss: 0.6966 - val_accuracy: 0.6190
+Epoch 7/7
+5/5 [==============================] - 2s 407ms/step - loss: 0.2461 - accuracy: 0.9000 - val_loss: 0.8038 - val_accuracy: 0.6190
+
+Validation results:
+Loss: [2.8365542888641357, 0.6222914457321167, 1.9216773509979248, 0.5231910347938538, 0.47571486234664917, 0.6965874433517456, 0.8037523627281189]
+Accurancy: [0.380952388048172, 0.6190476417541504, 0.4285714328289032, 0.7142857313156128, 0.6666666865348816, 0.6190476417541504, 0.6190476417541504]
+
+<ipython-input-7-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.8377135396003723
+Accuracy: 0.7599999904632568
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.4
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+6/6 [==============================] - 24s 2s/step - loss: 13.3276 - accuracy: 0.5706 - val_loss: 2.0982 - val_accuracy: 0.6207
+Epoch 2/7
+6/6 [==============================] - 2s 474ms/step - loss: 0.8679 - accuracy: 0.6626 - val_loss: 0.6908 - val_accuracy: 0.5172
+Epoch 3/7
+6/6 [==============================] - 2s 367ms/step - loss: 0.5594 - accuracy: 0.6933 - val_loss: 0.4731 - val_accuracy: 0.7586
+Epoch 4/7
+6/6 [==============================] - 2s 349ms/step - loss: 0.3557 - accuracy: 0.8650 - val_loss: 0.4536 - val_accuracy: 0.7931
+Epoch 5/7
+6/6 [==============================] - 2s 370ms/step - loss: 0.2347 - accuracy: 0.9141 - val_loss: 0.4473 - val_accuracy: 0.7586
+Epoch 6/7
+6/6 [==============================] - 3s 445ms/step - loss: 0.1224 - accuracy: 0.9632 - val_loss: 0.3342 - val_accuracy: 0.8621
+Epoch 7/7
+6/6 [==============================] - 3s 429ms/step - loss: 0.2980 - accuracy: 0.8896 - val_loss: 0.7337 - val_accuracy: 0.8276
+
+Validation results:
+Loss: [2.098245859146118, 0.6907907724380493, 0.47311684489250183, 0.4536009132862091, 0.4472891092300415, 0.33416882157325745, 0.7337499856948853]
+Accurancy: [0.6206896305084229, 0.517241358757019, 0.7586206793785095, 0.7931034564971924, 0.7586206793785095, 0.8620689511299133, 0.8275862336158752]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.8944535255432129
+Accuracy: 0.78125
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 7
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 7
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+
+6/6 [==============================] - 4s 417ms/step - loss: 11.4054 - accuracy: 0.5153 - val_loss: 1.9404 - val_accuracy: 0.3793
+Epoch 2/10
+6/6 [==============================] - 2s 353ms/step - loss: 0.8906 - accuracy: 0.5583 - val_loss: 0.7458 - val_accuracy: 0.6207
+Epoch 3/10
+6/6 [==============================] - 3s 441ms/step - loss: 0.5430 - accuracy: 0.6810 - val_loss: 0.7414 - val_accuracy: 0.6207
+Epoch 4/10
+6/6 [==============================] - 2s 356ms/step - loss: 0.4644 - accuracy: 0.7853 - val_loss: 0.4111 - val_accuracy: 0.8621
+Epoch 5/10
+6/6 [==============================] - 2s 364ms/step - loss: 0.4625 - accuracy: 0.8528 - val_loss: 0.9498 - val_accuracy: 0.6552
+Epoch 6/10
+6/6 [==============================] - 2s 368ms/step - loss: 0.3399 - accuracy: 0.8466 - val_loss: 0.3236 - val_accuracy: 0.8966
+Epoch 7/10
+6/6 [==============================] - 3s 427ms/step - loss: 0.2168 - accuracy: 0.9387 - val_loss: 0.4502 - val_accuracy: 0.8621
+Epoch 8/10
+6/6 [==============================] - 3s 445ms/step - loss: 0.1799 - accuracy: 0.9325 - val_loss: 0.4375 - val_accuracy: 0.7586
+Epoch 9/10
+6/6 [==============================] - 2s 357ms/step - loss: 0.1508 - accuracy: 0.9387 - val_loss: 0.4462 - val_accuracy: 0.8621
+Epoch 10/10
+6/6 [==============================] - 3s 420ms/step - loss: 0.1045 - accuracy: 0.9816 - val_loss: 0.3756 - val_accuracy: 0.7586
+
+Validation results:
+Loss: [1.9403767585754395, 0.7458416223526001, 0.7414027452468872, 0.4111088812351227, 0.949810802936554, 0.32355624437332153, 0.45021823048591614, 0.4374523162841797, 0.4462207853794098, 0.37562790513038635]
+Accurancy: [0.37931033968925476, 0.6206896305084229, 0.6206896305084229, 0.8620689511299133, 0.6551724076271057, 0.8965517282485962, 0.8620689511299133, 0.7586206793785095, 0.8620689511299133, 0.7586206793785095]
+
+<ipython-input-22-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.7799440026283264
+Accuracy: 0.6875
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.5
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+Predictions for testing images:
+
+
+
+6/6 [==============================] - 39s 5s/step - loss: 4.8443 - accuracy: 0.5429 - val_loss: 1.3785 - val_accuracy: 0.4889
+Epoch 2/10
+6/6 [==============================] - 3s 423ms/step - loss: 0.9328 - accuracy: 0.4857 - val_loss: 0.8068 - val_accuracy: 0.4889
+Epoch 3/10
+6/6 [==============================] - 3s 527ms/step - loss: 0.6703 - accuracy: 0.5486 - val_loss: 0.7064 - val_accuracy: 0.4222
+Epoch 4/10
+6/6 [==============================] - 3s 413ms/step - loss: 0.5653 - accuracy: 0.8343 - val_loss: 0.8173 - val_accuracy: 0.4889
+Epoch 5/10
+6/6 [==============================] - 3s 429ms/step - loss: 0.4367 - accuracy: 0.8057 - val_loss: 0.6862 - val_accuracy: 0.6000
+Epoch 6/10
+6/6 [==============================] - 3s 493ms/step - loss: 0.3609 - accuracy: 0.8686 - val_loss: 1.4970 - val_accuracy: 0.4889
+Epoch 7/10
+6/6 [==============================] - 3s 555ms/step - loss: 0.3288 - accuracy: 0.8686 - val_loss: 0.7200 - val_accuracy: 0.6222
+Epoch 8/10
+6/6 [==============================] - 3s 422ms/step - loss: 0.2740 - accuracy: 0.9257 - val_loss: 0.8028 - val_accuracy: 0.4222
+Epoch 9/10
+6/6 [==============================] - 3s 430ms/step - loss: 0.1455 - accuracy: 0.9771 - val_loss: 0.8481 - val_accuracy: 0.6222
+Epoch 10/10
+6/6 [==============================] - 3s 420ms/step - loss: 0.0575 - accuracy: 0.9943 - val_loss: 1.1758 - val_accuracy: 0.6000
+
+Validation results:
+Loss: [1.3785243034362793, 0.8067851662635803, 0.7064033150672913, 0.8173165917396545, 0.6861612200737, 1.4969985485076904, 0.7200276851654053, 0.8028320074081421, 0.8480860590934753, 1.1757820844650269]
+Accurancy: [0.4888888895511627, 0.4888888895511627, 0.42222222685813904, 0.4888888895511627, 0.6000000238418579, 0.4888888895511627, 0.6222222447395325, 0.42222222685813904, 0.6222222447395325, 0.6000000238418579]
+
+<ipython-input-2-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.8121470212936401
+Accuracy: 0.7021276354789734
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.6
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+
+
+/usr/local/lib/python3.10/dist-packages/keras/backend.py:5612: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a Softmax activation and thus does not represent logits. Was this intended?
+  output, from_logits = _get_logits(
+6/6 [==============================] - 5s 489ms/step - loss: 9.8468 - accuracy: 0.5314 - val_loss: 0.9515 - val_accuracy: 0.4889
+Epoch 2/10
+6/6 [==============================] - 3s 420ms/step - loss: 0.8154 - accuracy: 0.4914 - val_loss: 0.7036 - val_accuracy: 0.5556
+Epoch 3/10
+6/6 [==============================] - 3s 459ms/step - loss: 0.7307 - accuracy: 0.4629 - val_loss: 0.6819 - val_accuracy: 0.5556
+Epoch 4/10
+6/6 [==============================] - 3s 491ms/step - loss: 0.6330 - accuracy: 0.6914 - val_loss: 0.6872 - val_accuracy: 0.5111
+Epoch 5/10
+6/6 [==============================] - 3s 427ms/step - loss: 0.5980 - accuracy: 0.7371 - val_loss: 0.6602 - val_accuracy: 0.6000
+Epoch 6/10
+6/6 [==============================] - 3s 416ms/step - loss: 0.4547 - accuracy: 0.8571 - val_loss: 0.6736 - val_accuracy: 0.5778
+Epoch 7/10
+6/6 [==============================] - 4s 637ms/step - loss: 0.2872 - accuracy: 0.9371 - val_loss: 0.7478 - val_accuracy: 0.5111
+Epoch 8/10
+6/6 [==============================] - 3s 490ms/step - loss: 0.1848 - accuracy: 0.9486 - val_loss: 0.7272 - val_accuracy: 0.4667
+Epoch 9/10
+6/6 [==============================] - 3s 421ms/step - loss: 0.1278 - accuracy: 0.9829 - val_loss: 0.9211 - val_accuracy: 0.5556
+Epoch 10/10
+6/6 [==============================] - 3s 426ms/step - loss: 0.0576 - accuracy: 0.9943 - val_loss: 0.9406 - val_accuracy: 0.6000
+
+Validation results:
+Loss: [0.9515366554260254, 0.7035709619522095, 0.6818827986717224, 0.6871643662452698, 0.6602420210838318, 0.6736325025558472, 0.7477693557739258, 0.7271913290023804, 0.9210588932037354, 0.94056636095047]
+Accurancy: [0.4888888895511627, 0.5555555820465088, 0.5555555820465088, 0.5111111402511597, 0.6000000238418579, 0.5777778029441833, 0.5111111402511597, 0.46666666865348816, 0.5555555820465088, 0.6000000238418579]
+
+<ipython-input-7-9016620efc2d>:153: UserWarning: `Model.evaluate_generator` is deprecated and will be removed in a future version. Please use `Model.evaluate`, which supports generators.
+  test_loss, test_accuracy = model.evaluate_generator(test_generator, steps=len(test_generator))
+Test results
+Loss: 0.8169113397598267
+Accuracy: 0.6382978558540344
+
+---SETTINGS---
+general:
+--categories: 2
+model:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+--categories: 2
+--batch_size: 32
+--epochs: 10
+augmentation:
+--edit_prop: 0.6
+--flip_prop: 0.3
+--rotate_prop: 0.3
+--scale_prop: 0.3
+--shift_prop: 0.3
+--noise_prop: 10
+splitting:
+--train_size: 400
+--valid_size: 100
+--test_size: 100
+---SETTINGS---
+
+Predictions for testing images:

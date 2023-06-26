@@ -1,0 +1,21 @@
+
+        <div style="height:80%; width:100%">
+            <img src="{{data.url}}" class="card-img-top" alt="...">
+            <div class="card-body card scrollable-container">
+                <h5 class="card-title">{{data.title}}</h5>
+                <p class="card-text">{{data.text}}</p>
+                     
+            </div>
+            <div class="card-footer text-center" style="padding:5px">
+                <button 
+                    style="width: 100px"
+                    (click)="closeDialog()" 
+                    mat-raised-button 
+                    class="btn btn-sm" 
+                    matTooltip="Save product">
+                    <mat-icon>close</mat-icon>
+                    Close
+            </button>    
+            </div>
+
+        </div>

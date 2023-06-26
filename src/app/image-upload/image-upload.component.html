@@ -1,0 +1,194 @@
+
+ <div fxLayout="row" fxLayoutGap="16px">
+    <div fxFlex="100%"  style="width:100%">
+      <img src="assets/background.jpg" alt="Bild" class="full-width-image" style="width:100%; max-height: 600px;" [@fadeInFast]>
+      <div class="text-center">
+        <h2 class="text-center" style="margin: 20px;">Online Bird Identification NA</h2>
+        <mat-form-field>
+          <mat-label>Select a region</mat-label>
+          <mat-select (selectionChange)="selectRegion()" [(value)]="selectedRegion">
+            <mat-option *ngFor="let option of regions" [value]="option.value">{{ option.label }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <p class="text-justify text-center">Upload an image and find out the species on it.</p>
+        <p class="text-justify text-center">
+  
+          
+                  
+       </div>
+    </div>
+</div>
+
+
+
+
+<ng-container *ngIf="multipleBirdsPredicted else SingleBirdPredicted">
+
+  <div [@fadeInSlow]>
+    <div fxLayout="row" style="margin:10px">
+      <div fxFlex="100%" style="display: flex; justify-content: center; align-items: center;" >      
+        <ng-container *ngIf="selectedImage; else noImage">
+          <img [src]="unknownBirdSource" alt="Umgewandeltes Bild" id="unknownBird" class="img-thumbnail big-img" [@fadeInFast]>
+          <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+        </ng-container>
+        
+        <ng-template #noImage>
+          <img src="/assets/bird-silhouette.png" class="rounded-circle" alt="example placeholder" class="img-thumbnail" [@fadeInFast]>
+          
+          <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+        </ng-template>
+  
+        </div>
+    </div>
+  
+        
+    <div fxLayout="row wrap"  fxLayoutAlign="center center">     
+
+      <div class="card text-center" *ngFor="let key of sortedKeys" fxFlex="{{containerSize}}%"  (click)="openInfo(predictedBird)" >
+            <img src="{{urlObject[key]}}" class="rounded-circle" alt="example placeholder" class="img-thumbnail img-thumbnail-small" [@fadeInSlow]>
+          
+        <div class="card-body">
+          <h5 class="card-title">{{ getName(key) }}</h5>
+          <p class="card-text">{{ predictedBirdLabels[key] }} %</p>
+          <button class="center-button" mat-icon-button matTooltip="Show Information">
+            <mat-icon class="large-icon">info</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+
+  </div>
+
+
+</ng-container>
+  
+  
+
+
+
+
+
+<ng-template #SingleBirdPredicted>
+
+  <div fxLayout="row" [@fadeInSlow]>
+    <div fxFlex="33%" class="side-container">
+      
+  
+          <ng-container *ngIf="predictedBirdLabels && !isImageProcessing; else noPrediction">
+            <!-- <img src="assets/images/predictions/{{predictedBirdLabels}}1.jpg" alt="Umgewandeltes Bild"id="predictedBird2" class="img-thumbnail" [@fadeInFast]> -->
+            <img [src]="leftImageSource" class="img-thumbnail" [@fadeInSlow]>   
+            <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+          </ng-container>
+          
+          <ng-template #noPrediction>
+            <img src="assets/question-sign.png" alt="Beispielbild" class="img-thumbnail" [@fadeInFast]>
+            <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+          </ng-template>
+ 
+          
+    </div>
+    <div fxFlex="34%" class="main-container">
+  
+        
+  
+        <ng-container *ngIf="selectedImage && !isImageProcessing; else noImage">
+
+     
+          
+
+
+          <div class="card text-center" (click)="openInfo(predictedBird)" >
+    
+            <img [src]="unknownBirdSource" alt="Umgewandeltes Bild" id="unknownBird" class="img-thumbnail" [@fadeInFast]>
+          
+            <div class="card-body">
+              <h5 class="card-title">{{ getName(predictedBird) }}</h5>
+              <p class="card-text">{{ predictedBirdLabels[predictedBird] }} %</p>
+              <button  class="center-button" mat-icon-button matTooltip="Show Information">
+                <mat-icon class="large-icon">info</mat-icon>
+              </button>
+            </div>
+          </div>
+
+
+
+        </ng-container>
+        
+        <ng-template #noImage>
+          <img src="/assets/bird-silhouette.png" class="rounded-circle" alt="example placeholder" class="img-thumbnail" [@fadeInFast]>
+          
+          <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+        </ng-template>
+  
+  
+      
+        
+  
+    </div>
+    <div fxFlex="33%" class="side-container">
+      
+  
+      <ng-container *ngIf="predictedBirdLabels && !isImageProcessing; else noPrediction">
+        <!-- <img src="assets/images/predictions/{{predictedBirdLabels}}2.jpg" alt="Umgewandeltes Bild"id="predictedBird2" class="img-thumbnail" [@fadeInFast]> -->
+        <img [src]="rightImageSource" class="img-thumbnail" [@fadeInSlow]>
+
+        <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+      </ng-container>
+      
+      <ng-template #noPrediction>
+        <img src="assets/question-sign.png" alt="Beispielbild" class="img-thumbnail" [@fadeInFast]>
+        <!-- Weitere HTML-Elemente oder Angular-Komponenten -->
+      </ng-template>
+
+      
+
+        </div>
+      </div>
+      
+  
+</ng-template>
+
+
+
+
+
+<div fxLayout="row" fxLayoutGap="16px">
+  <div fxFlex="100%" style="width: 100%; height: 300px;">
+    <div class="text-center">
+      <p *ngIf="!predictedBirdLabels" class="text-justify text-center" [@fadeInFast]>Choose a bird image to identify</p>
+
+      <div class="d-flex justify-content-center" [@fadeInFast] style="margin: 16px;">
+        <div *ngIf="processInited" class="btn reload-btn btn-rounded d-flex flex-column align-items-center mx-2">
+          <mat-icon class="mb-1">loop</mat-icon>
+          <label class="form-label text-white" for="customFile1">Examples</label>
+          <input type="button" class="form-control d-none" id="customFile1" (click)="reloadExamples()">
+        </div>
+
+        <div class="btn upload-btn btn-rounded d-flex flex-column align-items-center mx-2" [@fadeInFast]>
+          <mat-icon class="mb-1">cloud_upload</mat-icon>
+          <label class="form-label text-white" for="customFile2">Upload</label>
+          <input type="file" class="form-control d-none" id="customFile2" accept="image/*" (change)="startProcess($event)">
+        </div>
+      </div>
+
+      <p *ngIf="isImageProcessing" class="text-justify text-center" [@fadeInFast]>Loading Prediction...</p>
+      <div *ngIf="!isImageProcessing && predictedBirdLabels" class="alert alert-success" role="alert" [@fadeInSlow]>
+        <p>
+          The model considers
+          <span style="font-weight: bold">{{birdsCount}}</span>
+          bird species.
+        </p>
+        <p>If none of the images resembles your image, try another image.</p>
+      </div>
+
+    </div>
+
+    <ng-container *ngIf="isImageProcessing">
+      <mat-progress-spinner class="loader" color="warn" mode="indeterminate" [@fadeInFast]></mat-progress-spinner>
+    </ng-container>
+
+  </div>
+</div>

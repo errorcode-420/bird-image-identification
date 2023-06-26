@@ -1,0 +1,14 @@
+.scrollable-container {
+    height: 300px; /* Passe die Höhe an deine Bedürfnisse an */
+    overflow-y: auto;
+  }
+  
+
+
+  .card-header {
+    background-color: rgb(226, 183, 183);
+  }  
+  
+  .card-footer {
+    background-color: rgb(226, 183, 183);
+  }
